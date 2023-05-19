@@ -30,7 +30,6 @@ app.add_middleware(
 @app.get('/get-nearby-foodTrucks')
 async def near_by_foodTrucks(address: str):
     data =  model['data']()
-    print(data)
     add= food_trucks.get_latlong(address)
     
     result = sorted(
